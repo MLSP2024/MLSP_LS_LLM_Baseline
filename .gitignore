@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+
+# development
+*.bbprojectd/
+TODO
+TODO/
+/zz-*/
+/00-*/
+/data/
+slurm-*.out
+/MLSP_Organisers/

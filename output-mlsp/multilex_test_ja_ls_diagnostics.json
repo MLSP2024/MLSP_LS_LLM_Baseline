@@ -1,0 +1,1 @@
+{"usage": {"ja": {"prompt_tokens": 1358430, "completion_tokens": 1227334, "total_tokens": 2585764}}, "model": "meta-llama/Llama-2-70b-chat-hf", "prompt_name": "mlsp", "tagalog": true, "quantization": "4bit", "batch_size": 16, "seed": 42, "errors": [], "inference_time": 5860.862594360486}

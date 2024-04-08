@@ -1,0 +1,1 @@
+{"usage": {"de": {"prompt_tokens": 1095936, "completion_tokens": 419263, "total_tokens": 1515199}}, "model": "meta-llama/Llama-2-70b-chat-hf", "prompt_name": "only-alt-lang", "tagalog": true, "quantization": "4bit", "batch_size": 16, "seed": 42, "errors": [], "inference_time": 2466.2915051151067}

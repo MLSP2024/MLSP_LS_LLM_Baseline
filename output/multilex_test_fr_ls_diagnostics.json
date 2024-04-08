@@ -1,0 +1,1 @@
+{"usage": {"fr": {"prompt_tokens": 712194, "completion_tokens": 809683, "total_tokens": 1521877}}, "model": "meta-llama/Llama-2-70b-chat-hf", "prompt_name": "unihd", "tagalog": false, "quantization": "4bit", "batch_size": 16, "seed": 42, "errors": [], "inference_time": 5762.585956963128}

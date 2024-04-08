@@ -1,0 +1,3 @@
+[submodule "MLSP_Data"]
+	path = MLSP_Data
+	url = https://github.com/MLSP2024/MLSP_Data
