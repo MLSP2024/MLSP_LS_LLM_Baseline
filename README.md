@@ -4,11 +4,11 @@ A baseline based on zero-shot prompting a large language model. We employ the ch
 
 ```
 Context: {context}
-Question: Given the above context, list ten alternative {lang_space}words for "{word}" that are easier to understand. *List only the words without translations, transcriptions or explanations.*
+Question: Given the above context, list ten alternative {lang_space}words for "{word}" that are easier to understand. List only the words without translations, transcriptions or explanations.
 Answer:
 ```
 
-To construct the prompt, the placeholders in curly braces are replaced by the context, the language of the instance, and the target word to be simplified. For English, the placeholder `{language}` and the subsequent space is omitted. The prompt is identical to a zero-shot prompt employed for lexical simplification using a ChatGPT model by  [Aumiller and Gertz (2022)](https://github.com/dennlinger/TSAR-2022-Shared-Task), except for the the emphasised sentence (`List only`…), which we have added to reduce unnecessary translations to English, transcriptions to Latin alphabet, or explanations. Such extra input was generated frequently when we applied the original prompt to trial data. The addition of the sentence results in both faster inference and higher accuracy.
+To construct the prompt, the placeholders in curly braces are replaced by the context, the language of the instance, and the target word to be simplified. For English, the placeholder `{language}` and the subsequent space is omitted. The prompt is identical to a zero-shot prompt employed for lexical simplification using a ChatGPT model by  [Aumiller and Gertz (2022)](https://github.com/dennlinger/TSAR-2022-Shared-Task), except for the the sentence “`List only` … `explanations.`”, which we have added to reduce unnecessary translations to English, transcriptions to Latin alphabet, or explanations. Such extra input was generated frequently when we applied the original prompt to trial data. The addition of the sentence results in both faster inference and higher accuracy.
 
 Our postprocessing also builds on the work by Aumiller and Gertz (2022). Based on an examination of outputs using the trial data, we made minor changes reflecting a broader array of languages and scripts as well as a different model. For instance, we allow words to be separated by ideographic commas (、) commonly used in Japanese, or lists enumerated using letters (e.g. `a)`, `b)`, …), which occurred in Llama 2 output.
 
