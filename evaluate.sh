@@ -16,7 +16,7 @@ eval_prompt() {
 	if [ -z "$prompt" ]
 	then
 		dir="output"
-		out="quick_results_only.tsv"
+		out="quick_results.tsv"
 		prompt='only'
 	else
 		dir="output_${prompt}"
