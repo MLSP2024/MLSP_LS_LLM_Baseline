@@ -1,4 +1,4 @@
 torch==2.1.1
-transformers
-bitsandbytes
-tqdm
+transformers=4.38.2
+bitsandbytes=0.41.2.post2
+tqdm=4.66.1

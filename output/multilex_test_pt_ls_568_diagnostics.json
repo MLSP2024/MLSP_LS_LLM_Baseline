@@ -1,1 +1,1 @@
-{"usage": {"pt": {"prompt_tokens": 839402, "completion_tokens": 807051, "total_tokens": 1646453}}, "model": "meta-llama/Llama-2-70b-chat-hf", "prompt_name": "unihd", "tagalog": false, "quantization": "4bit", "batch_size": 16, "seed": 42, "errors": [], "inference_time": 5851.274148564087}
+{"usage": {"pt": {"prompt_tokens": 975017, "completion_tokens": 438523, "total_tokens": 1413540}}, "model": "meta-llama/Llama-2-70b-chat-hf", "prompt_name": "only", "tagalog": true, "quantization": "4bit", "batch_size": 16, "seed": 42, "errors": [], "inference_time": 2887.0285811945796}

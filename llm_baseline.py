@@ -143,45 +143,6 @@ def get_prompt(
             f'or explanations.\n'
             f'Answer:'
             )
-    if prompt_name == 'only-alt':
-        return (
-            f'Context: {context}\n'
-            f'Question: Given the above context, list ten alternative {lang_space}'
-            f'words for \"{word}\" that are easier to understand. '
-            f'List only the alternative words '
-            f'without translations, transcriptions or explanations.\n'
-            f'Answer:'
-            )
-    if prompt_name == 'only-lang':
-        return (
-            f'Context: {context}\n'
-            f'Question: Given the above context, list ten alternative {lang_space}'
-            f'words for \"{word}\" that are easier to understand. '
-            f'List only the {lang_space}words '
-            f'without translations, transcriptions or explanations.\n'
-            f'Answer:'
-            )
-    if prompt_name == 'only-alt-lang':
-        return (
-            f'Context: {context}\n'
-            f'Question: Given the above context, list ten alternative {lang_space}'
-            f'words for \"{word}\" that are easier to understand. '
-            f'List only the alternative {lang_space} words '
-            f'without translations, transcriptions or explanations.\n'
-            f'Answer:'
-            )
-    if prompt_name == 'mlsp':
-        return (
-            f'Context: {context}\n'
-            f'Question: Given the above context, list ten alternative {lang_space}'
-            f'words that could be used to simplify \"{word}\".\n'
-            f'The alternative words should be selected to ensure that:\n'
-            f'(a) the meaning of the original word and the overall context is preserved,\n'
-            f'(b) each alternative word is genuinely easier to understand than the original word,\n'
-            f'(c) each alternative word fits correctly within the given context.\n'
-            f'Answer:'
-            )
-
 
 def count_tokens(tokens_ids, tokenizer, count_eos):
     n = len(tokens_ids)
@@ -435,7 +396,7 @@ if __name__ == '__main__':
         '--huggingface-token', type=str, default=True,
         help='Hugging Face token for gated models (default: true => read from config).'
         )
-    parser.add_argument('--prompt-name', default='unihd')
+    parser.add_argument('--prompt-name', default='only')
     parser.add_argument('--input-max-length', type=int, default=512,
                         help='Maximum sequence length for the tokenizer.')
     parser.add_argument('--output-max-length', type=int, default=256,

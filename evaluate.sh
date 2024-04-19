@@ -16,10 +16,10 @@ eval_prompt() {
 	if [ -z "$prompt" ]
 	then
 		dir="output"
-		out="quick_results_unihd.tsv"
-		prompt='unihd'
+		out="quick_results_only.tsv"
+		prompt='only'
 	else
-		dir="output-${prompt}"
+		dir="output_${prompt}"
 		out="quick_results_${prompt}.tsv"
 	fi
 	echo
@@ -33,10 +33,6 @@ eval_prompt() {
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/English/multilex_test_english_ls_labels.tsv	"${dir}/multilex_test_en_ls.tsv"
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/Spanish/multilex_test_spanish_ls_labels.tsv	"${dir}/multilex_test_es_ls.tsv"
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/Filipino/multilex_test_filipino_ls_labels.tsv	"${dir}/multilex_test_fil_ls.tsv"
-		if [ "$prompt" = 'unihd' ]
-		then
-			python quick_eval.py -D --gold 	MLSP_Organisers/Gold/Filipino/multilex_test_filipino_ls_labels.tsv	"${dir}/multilex_test_fil_tgl_ls.tsv"
-		fi
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/French/multilex_test_french_ls_labels.tsv	"${dir}/multilex_test_fr_ls.tsv"
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/Italian/multilex_test_italian_ls_labels.tsv	"${dir}/multilex_test_it_ls.tsv"
 		python quick_eval.py -D --gold 	MLSP_Organisers/Gold/Japanese/multilex_test_japanese_ls_labels.tsv	"${dir}/multilex_test_ja_ls.tsv"
@@ -46,8 +42,4 @@ eval_prompt() {
 }
 
 eval_prompt
-eval_prompt only
-eval_prompt only-alt
-eval_prompt only-lang
-eval_prompt only-alt-lang
-eval_prompt mlsp
+# eval_prompt unihd
