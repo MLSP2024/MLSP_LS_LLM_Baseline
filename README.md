@@ -1,6 +1,6 @@
 # MLSP_LS_LLM_Baseline
 
-A baseline based on zero-shot prompting a large language model. We employ the chat-finetuned [Llama 2 70B model](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf) in 4-bit quantisation. We use the following zero-shot prompt template and temperature 0.3 to generate a maximum of 256 new tokens.
+An LS baseline for the Multilingual Lexical Simplification Pipeline 2024 Shared Task based on zero-shot prompting a large language model. We employ the chat-finetuned [Llama 2 70B model](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf) in 4-bit quantisation. We use the following zero-shot prompt template and temperature 0.3 to generate a maximum of 256 new tokens.
 
 ```
 Context: {context}
@@ -28,3 +28,11 @@ Note that the [output](output) of the baseline is already included in the reposi
 3. Run the baseline:
 
     ```bash experiments.sh```
+
+
+## Links
+
+- [MLSP shared task web site](https://sites.google.com/view/mlsp-sharedtask-2024)
+- [shared task data repository](https://github.com/MLSP2024/MLSP_Data)
+- [cleaned gold test data](https://huggingface.co/datasets/MLSP2024/MLSP2024) on Hugging Face
+- [Frequency-based lexical complexity baseline](https://github.com/MLSP2024/MLSP_LCP_Baseline)
