@@ -1,6 +1,6 @@
 # MLSP_LS_LLM_Baseline
 
-A baseline based on zero-shot prompting a large language model. We employ the chat-finetuned [Llama 2 70B model](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf) in 4-bit quantisation. We use a the following zero-shot prompt template and temperature 0.3 to generate a maximum of 256 new tokens.
+A baseline based on zero-shot prompting a large language model. We employ the chat-finetuned [Llama 2 70B model](https://huggingface.co/meta-llama/Llama-2-70b-chat-hf) in 4-bit quantisation. We use the following zero-shot prompt template and temperature 0.3 to generate a maximum of 256 new tokens.
 
 ```
 Context: {context}
